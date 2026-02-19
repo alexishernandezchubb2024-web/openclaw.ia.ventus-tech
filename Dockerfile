@@ -52,6 +52,9 @@ RUN chown -R node:node /app
 # This reduces the attack surface by preventing container escape via root privileges
 USER node
 
+# Puerto por defecto (ajusta si OpenClaw usa otro)
+EXPOSE 8000
+
 # Start gateway server with default config.
 # Binds to loopback (127.0.0.1) by default for security.
 #
