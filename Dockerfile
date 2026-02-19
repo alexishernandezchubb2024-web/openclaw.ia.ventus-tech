@@ -59,4 +59,10 @@ USER node
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
 #   CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
-CMD ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
+
+EXPOSE 18789
+
+CMD ["sh", "-c", "node dist/index.js gateway --bind lan --port ${PORT:-18789}"]
+
+
+#CMD ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
