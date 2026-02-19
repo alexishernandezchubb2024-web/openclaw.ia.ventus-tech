@@ -53,8 +53,7 @@ RUN chown -R node:node /app
 USER node
 
 # Puerto por defecto (ajusta si OpenClaw usa otro)
-EXPOSE 8000
-
+EXPOSE 8080
 # Start gateway server with default config.
 # Binds to loopback (127.0.0.1) by default for security.
 #
