@@ -62,7 +62,4 @@ USER node
 
 EXPOSE 18789
 
-CMD ["sh", "-c", "node dist/index.js gateway --bind lan --port ${PORT:-18789}"]
-
-
-#CMD ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
+CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured", "--bind", "lan", "--port", "18789"]
